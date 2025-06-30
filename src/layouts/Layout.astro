@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css'
 import Navbar from '../components/navbar.astro';
+import AnimatedScene from '../components/AnimatedScene';
 const { pageName } = Astro.props;
 ---
 
@@ -18,5 +19,6 @@ const { pageName } = Astro.props;
         <a href="/portfolio/about">About</a>
 		<h1>{pageName}</h1>
         <slot />
+		<AnimatedScene client:load />
 	</body>
 </html>
