@@ -17,8 +17,6 @@ const { pageName } = Astro.props;
         <Navbar></Navbar>
 		<a href="/portfolio/">Home</a>
         <a href="/portfolio/about">About</a>
-		<h1>{pageName}</h1>
-        <slot />
-		<AnimatedScene client:load />
+		<AnimatedScene pageName={pageName} client:load />
 	</body>
 </html>

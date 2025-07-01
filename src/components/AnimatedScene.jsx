@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
-export default function AnimatedScene() {
+export default function AnimatedScene({pageName}) {
   const mountRef = useRef(null);
 
   useEffect(() => {
@@ -34,5 +34,13 @@ export default function AnimatedScene() {
     };
   }, []);
 
-  return <div ref={mountRef} style={{ width: '100%', height: '400px' }} />;
+  return (
+  <div className="relative w-screen h-screen">
+    <h1 className="text-2xl absolute top-4 left-4 z-10 mt-5 text-white">This is the {pageName} page</h1>
+    <div
+      ref={mountRef}
+      className="absolute top-0 left-0 w-full h-full z-0"
+    />
+  </div>
+  )
 }
