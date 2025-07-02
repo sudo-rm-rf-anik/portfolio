@@ -9,14 +9,12 @@ const { pageName } = Astro.props;
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/png" href="/portfolio/favicon.png" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="generator" content={Astro.generator} />
 		<title>Anik - {pageName}</title>
 	</head>
-	<body>
+	<body class="h-screen flex flex-col">
         <Navbar></Navbar>
-		<a href="/portfolio/">Home</a>
-        <a href="/portfolio/about">About</a>
 		<AnimatedScene pageName={pageName} client:load />
 	</body>
 </html>

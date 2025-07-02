@@ -35,11 +35,11 @@ export default function AnimatedScene({pageName}) {
   }, []);
 
   return (
-  <div className="relative w-screen h-screen">
-    <h1 className="text-2xl absolute top-4 left-4 z-10 mt-5 text-white">This is the {pageName} page</h1>
+  <div className="fixed w-full h-full">
+    <h1 className="text-2xl absolute top-20 left-20 z-10 text-white">This is the {pageName} page</h1>
     <div
       ref={mountRef}
-      className="absolute top-0 left-0 w-full h-full z-0"
+      className="relative top-0 left-0 w-full h-full z-0"
     />
   </div>
   )
